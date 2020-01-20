@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE I2CEConfiguration SYSTEM "I2CE_Configuration.dtd">
+<I2CEConfiguration name="LBBoards_Data">
+  <metadata>
+    <displayName>System Data</displayName>
+    <category>Application Component</category>
+    <description>System Data</description>
+    <link>https://launchpad.net/i2ce</link>
+    <version>4.3.0.1</version>
+    <path name="modules">
+      <value>./modules</value>
+    </path>
+    <requirement name="LBBoards_Regions">
+      <atLeast version="4.3" />
+      <lessThan version="4.4" />
+    </requirement>
+    <requirement name="LBBoards_Districts">
+      <atLeast version="4.3" />
+      <lessThan version="4.4" />
+    </requirement>
+    <requirement name="LBBoards_Facilities">
+      <atLeast version="4.3" />
+      <lessThan version="4.4" />
+    </requirement>
+    <requirement name="LBBoards_FacilityOwnership">
+      <atLeast version="4.3" />
+      <lessThan version="4.4" />
+    </requirement>
+    <requirement name="LBBoards_FacilityType">
+      <atLeast version="4.3" />
+      <lessThan version="4.4" />
+    </requirement>
+    <priority>350</priority>
+  </metadata>
+  </I2CEConfiguration>

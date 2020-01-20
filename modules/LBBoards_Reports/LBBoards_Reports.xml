@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<!DOCTYPE I2CEConfiguration SYSTEM "I2CE_Configuration.dtd">
+<I2CEConfiguration name="LBBoards_Reports">
+  <metadata>
+    <displayName>Reports</displayName>
+    <category>Application Component</category>
+    <description>Makes Person information available to the system</description>
+    <link>https://launchpad.net/i2ce</link>
+    <version>4.3.0.1</version>
+    <requirement name="ihris-qualify-CustomReports">
+      <atLeast version="4.3" />
+      <lessThan version="4.4" />
+    </requirement>
+    <enable name="CustomReports-full-continuos_education" />
+    <enable name="CustomReports-full-deployment" />
+    <enable name="CustomReports-full-discipline" />
+    <enable name="CustomReports-full-education_history" />
+    <enable name="CustomReports-full-exam_applications" />
+    <enable name="CustomReports-full-exam_results" />
+    <enable name="CustomReports-full-last_license" />
+    <enable name="CustomReports-full-license_renewal" />
+    <enable name="CustomReports-full-overall_exam_assessment" />
+    <enable name="CustomReports-full-person" />
+    <enable name="CustomReports-full-resit_applicants" />
+    <path name="modules">
+      <value>./Reports</value>
+    </path>
+    <priority>350</priority>
+  </metadata>
+  <erase path="/modules/CustomReports/relationships/exam">
+    <lessThan version="4.3.0.1" />
+  </erase>
+  <erase path="/modules/CustomReports/reports/exam">
+    <lessThan version="4.3.0.1" />
+  </erase>
+  <erase path="/modules/CustomReports/reportViews/exam_pass_fail">
+    <lessThan version="4.3.0.1" />
+  </erase>
+  <erase path="/modules/CustomReports/reportViews/exam_pass_fail_year">
+    <lessThan version="4.3.0.1" />
+  </erase>
+  <erase path="/modules/CustomReports/relationships/license">
+    <lessThan version="4.3.0.1" />
+  </erase>
+  <erase path="/modules/CustomReports/reports/license">
+    <lessThan version="4.3.0.1" />
+  </erase>
+  <erase path="/modules/CustomReports/reportViews/lisc_health_workers">
+    <lessThan version="4.3.0.1" />
+  </erase>
+  <erase path="/modules/CustomReports/reportViews/lisc_by_cadre">
+    <lessThan version="4.3.0.1" />
+  </erase>
+  <erase path="/modules/CustomReports/relationships/person">
+    <lessThan version="4.3.0.1" />
+  </erase>
+  <erase path="/modules/CustomReports/reports/person">
+    <lessThan version="4.3.0.1" />
+  </erase>
+  <erase path="/modules/CustomReports/reportViews/top_birth_district">
+    <lessThan version="4.3.0.1" />
+  </erase>
+  <erase path="/modules/CustomReports/reportViews/student_intake_year">
+    <lessThan version="4.3.0.1" />
+  </erase>
+  <erase path="/modules/CustomReports/reportViews/pass_fail_person">
+    <lessThan version="4.3.0.1" />
+  </erase>
+  <erase path="/modules/CustomReports/reportViews/final_exam_reg">
+    <lessThan version="4.3.0.1" />
+  </erase>
+  <erase path="/modules/CustomReports/reportViews/student_training_year">
+    <lessThan version="4.3.0.1" />
+  </erase>
+  <erase path="/modules/CustomReports/relationships/registration">
+    <lessThan version="4.3.0.1" />
+  </erase>
+  <erase path="/modules/CustomReports/reports/registration">
+    <lessThan version="4.3.0.1" />
+  </erase>
+  <erase path="/modules/CustomReports/reportViews/registration">
+    <lessThan version="4.3.0.1" />
+  </erase>
+  <erase path="/modules/CustomReports/reportViews/reg_health_workers">
+    <lessThan version="3.3.5" />
+  </erase>
+  <erase path="/modules/CustomReports/reportViews/search_training">
+    <lessThan version="4.3.0.1" />
+  </erase>
+  <erase path="/modules/CustomReports/relationships/training">
+    <lessThan version="4.3.0.1" />
+  </erase>
+  <erase path="/modules/CustomReports/reports/training">
+    <lessThan version="4.3.0.1" />
+  </erase>
+  <erase path="/modules/CustomReports/relationships/training_disruption">
+    <lessThan version="4.3.0.1" />
+  </erase>
+  <erase path="/modules/CustomReports/reports/training_disruption">
+    <lessThan version="4.3.0.1" />
+  </erase>
+  <erase path="/modules/CustomReports/reportViews/discontinuation_category">
+    <lessThan version="4.3.0.1" />
+  </erase>
+  <erase path="/modules/CustomReports/reportViews/discontination_reason">
+    <lessThan version="4.3.0.1" />
+  </erase>
+  <erase path="/modules/CustomReports/reportViews/discontinuation_year">
+    <lessThan version="4.3.0.1" />
+  </erase>
+  <erase path="/modules/CustomReports/reportViews/resumption">
+    <lessThan version="4.3.0.1" />
+  </erase>
+  <erase path="/modules/CustomReports/relationships/institution">
+    <lessThan version="4.3.0.1" />
+  </erase>
+  <erase path="/modules/CustomReports/reports/institution">
+    <lessThan version="4.3.0.1" />
+  </erase>
+  <erase path="/modules/CustomReports/reportViews/institution">
+    <lessThan version="4.3.0.1" />
+  </erase>
+  <configurationGroup name="License" path="/I2CE">
+    <configurationGroup name="ihris-qualify-CustomReports" path="/modules/CustomReports">
+      <displayName>iHRIS Qualify Custom Reports</displayName>
+      <configurationGroup name="pdf_options" path="displays/PDF/display_options">
+        <displayName>PDF Options</displayName>
+        <configurationGroup name="header">
+          <displayName>Header Options</displayName>
+          <configuration name="title_prefix">
+            <displayName>Header Title</displayName>
+            <value>LBNM</value>
+          </configuration>
+          <configuration name="text_prefix">
+            <displayName>Header Text</displayName>
+            <value>LBNM System</value>
+          </configuration>
+          <configurationGroup name="logo">
+            <displayName>Logo</displayName>
+            <configuration name="file">
+              <displayName>file</displayName>
+              <value>iHRISQualify_logo_whiteBG.png</value>
+            </configuration>
+            <configuration name="width">
+              <displayName>width</displayName>
+              <value>0.6</value>
+            </configuration>
+          </configurationGroup>
+        </configurationGroup>
+      </configurationGroup>
+    </configurationGroup>
+  </configurationGroup>
+</I2CEConfiguration>

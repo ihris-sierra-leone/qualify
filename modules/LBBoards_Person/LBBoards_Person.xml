@@ -1,0 +1,175 @@
+<?xml version="1.0"?>
+<!DOCTYPE I2CEConfiguration SYSTEM "I2CE_Configuration.dtd">
+<I2CEConfiguration name="LBBoards_Person">
+  <metadata>
+    <displayName>Person</displayName>
+    <category>Application Component</category>
+    <description>Makes Person information available to the system</description>
+    <link>https://launchpad.net/i2ce</link>
+    <version>4.3.0.15</version>
+    <requirement name="Person">
+      <atLeast version="4.3" />
+      <lessThan version="4.4" />
+    </requirement>
+    <requirement name="ihris-qualify">
+      <atLeast version="4.3" />
+      <lessThan version="4.4" />
+    </requirement>
+    <path name="templates">
+      <value>./templates</value>
+    </path>
+    <path name="classes">
+      <value>./lib</value>
+    </path>
+    <priority>450</priority>
+  </metadata>
+  <configurationGroup name="Person" path="/I2CE">
+    <configurationGroup name="tasks" path="/I2CE/tasks/task_description" locale="en_US">
+      <version>4.3.0.12</version>
+      <configuration name="person_can_add" locale="en_US">
+        <value>Can add new person</value>
+      </configuration>
+    </configurationGroup>
+    <configurationGroup name="forms" path="/modules/forms">
+      <displayName>Forms</displayName>
+      <description>Information about the forms made available by iHRIS-Common Person</description>
+      <configurationGroup name="formClasses">
+        <displayName>Form Class Configuration</displayName>
+        <configurationGroup name="iHRIS_Person">
+          <version>4.3.0.8</version>
+          <configurationGroup name="fields">
+            <displayName>The fields defined for this form</displayName>
+            <configurationGroup name="cadre">
+              <displayName>The field 'cadre'</displayName>
+              <configuration name="formfield">
+                <displayName>The form field type</displayName>
+                <value>MAP</value>
+              </configuration>
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Cadre</value>
+              </configuration>
+              <configuration name="required" type="boolean">
+                <displayName>This field is required to be set</displayName>
+                <value>true</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="registration_number">
+              <displayName>The field 'registration_number'</displayName>
+              <configuration name="formfield">
+                <displayName>The form field type</displayName>
+                <value>STRING_LINE</value>
+              </configuration>
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Registration Number</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="registration_status">
+              <displayName>The field 'registration_status'</displayName>
+              <configuration name="formfield" values="single" type="string">
+                <displayName>The form field type</displayName>
+                <value>MAP</value>
+              </configuration>
+              <configuration name="headers" type="delimited" locale="en_US" values="single">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Registration Status</value>
+              </configuration>
+              <configuration name="default_value">
+                <displayName>The default Value as an eval string</displayName>
+                <value>exam_app_status|pending</value>
+              </configuration>
+              <configurationGroup name="meta">
+                <configuration name="form" values="many">
+                  <value>exam_app_status</value>
+                </configuration>
+                <configurationGroup name="display">
+                  <configurationGroup name="default">
+                    <configuration name="fields">
+                      <value>exam_app_status</value>
+                    </configuration>
+                  </configurationGroup>
+                </configurationGroup>
+              </configurationGroup>
+            </configurationGroup>
+            <configurationGroup name="reject_reason">
+              <configuration name="formfield">
+                <value>STRING_MLINE</value>
+              </configuration>
+              <configuration name="headers" type="delimited" locale="en_US">
+                <value>default:Rejecting Reason</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="decision_date">
+              <configuration name="formfield">
+                <value>DATE_YMD</value>
+              </configuration>
+              <configuration name="headers" type="delimited" locale="en_US">
+                <value>default:Registration Decision Date</value>
+              </configuration>
+            </configurationGroup>
+          </configurationGroup>
+        </configurationGroup>
+        <!-- iHRIS_Person -->
+      </configurationGroup>
+      <!-- End /modules/forms/formClasses -->
+    </configurationGroup>
+    <configurationGroup name="page">
+      <version>4.3.0.15</version>
+      <configurationGroup name="person">
+        <configuration name="class" values="single">
+          <displayName>Page Class</displayName>
+          <description>The class responsible for displaying this page</description>
+          <status>required:true</status>
+          <value>LBBoards_PageFormPerson</value>
+        </configuration>
+      </configurationGroup>
+      <configurationGroup name="view">
+        <displayName>View Page</displayName>
+        <description>The page 'view' which has the action of: View Person</description>
+        <configuration name="class" values="single">
+          <displayName>Page Class</displayName>
+          <description>The class responsible for displaying this page</description>
+          <status>required:true</status>
+          <value>LBBoards_PageView</value>
+        </configuration>
+      </configurationGroup>
+      <configurationGroup name="process_registration">
+        <displayName>Leave Page</displayName>
+        <description>The page has the action of: approving/rejecting registrations</description>
+        <configuration name="style" values="single">
+          <displayName>Page Style</displayName>
+          <description>The Page Style</description>
+          <value>shell</value>
+        </configuration>
+        <configuration name="class" values="single">
+          <value>LBBoards_ProcessRegistration</value>
+        </configuration>
+        <configurationGroup name="args">
+          <displayName>Page Options</displayName>
+          <description>The options that control the access and display of all pages</description>
+          <configuration name="title" values="single" locale="en_US">
+            <displayName>Page Title</displayName>
+            <description>Page Title</description>
+            <status>required:true</status>
+            <value>Process Registration</value>
+          </configuration>
+          <configuration name="access" values="many" type="string">
+            <displayName>Page Access</displayName>
+            <description>All of the roles that have access to this page</description>
+            <status>required:false</status>
+            <value>registrar</value>
+          </configuration>
+          <configuration name="defaultHTMLFile" values="many">
+            <displayName>Default HTML File</displayName>
+            <description>The default HTML File for this page</description>
+            <status>required:true</status>
+            <value>form_process_registration.html</value>
+          </configuration>
+        </configurationGroup>
+      </configurationGroup>
+    </configurationGroup>
+    <!-- End /modules/forms -->
+  </configurationGroup>
+  <!-- Person -->
+</I2CEConfiguration>

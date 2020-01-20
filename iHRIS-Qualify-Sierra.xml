@@ -1,0 +1,442 @@
+<?xml version="1.0"?>
+<!DOCTYPE I2CEConfiguration SYSTEM "I2CE_Configuration.dtd">
+<I2CEConfiguration name="ihris-qualify-site">
+  <metadata>
+    <displayName>iHRIS Qualify</displayName>
+    <className>LBBoards_Module_Qualify</className>
+    <category>Site</category>
+    <description>the iHRIS Qualify Site</description>
+    <version>4.3.1</version>
+    <path name="configs">
+      <value>./configs</value>
+    </path>
+    <path name="css">
+      <value>./css</value>
+    </path>
+    <requirement name="ihris-qualify">
+      <atLeast version="4.3" />
+      <lessThan version="4.4" />
+    </requirement>
+    <requirement name="UserAccess">
+      <atLeast version="4.3" />
+      <lessThan version="4.4" />
+    </requirement>
+    <requirement name="LBBoards_Exams">
+      <atLeast version="4.3" />
+      <lessThan version="4.4" />
+    </requirement>
+    <requirement name="LBBoards_Cadre">
+      <atLeast version="4.3" />
+      <lessThan version="4.4" />
+    </requirement>
+    <requirement name="LBBoards_Person">
+      <atLeast version="4.3" />
+      <lessThan version="4.4" />
+    </requirement>
+    <requirement name="LBBoards_License">
+      <atLeast version="4.3" />
+      <lessThan version="4.4" />
+    </requirement>
+    <requirement name="LBBoards_SelfService">
+      <atLeast version="4.3" />
+      <lessThan version="4.4" />
+    </requirement>
+    <requirement name="ihris-qualify-PersonTraining">
+      <atLeast version="4.3" />
+      <lessThan version="4.4" />
+    </requirement>
+    <requirement name="LBBoards_Reports">
+      <atLeast version="4.3" />
+      <lessThan version="4.4" />
+    </requirement>
+    <requirement name="PersonArchivedScan">
+      <atLeast version="4.3" />
+      <lessThan version="4.4" />
+    </requirement>
+    <requirement name="LBBoards_Facility">
+      <atLeast version="4.3" />
+      <lessThan version="4.4" />
+    </requirement>
+    <requirement name="LBBoards_Data">
+      <atLeast version="4.3" />
+      <lessThan version="4.4" />
+    </requirement>
+    <requirement name="LBBoards_Education">
+      <atLeast version="4.3" />
+      <lessThan version="4.4" />
+    </requirement>
+    <enable name="default-locales" />
+    <enable name="stub" />
+    <enable name="PersonContact" />
+    <enable name="PersonDemographic" />
+    <enable name="PersonID" />
+    <path name="classes">
+      <value>./lib</value>
+    </path>
+    <path name="templates">
+      <value>./templates</value>
+    </path>
+    <path name="css">
+      <value>./css</value>
+    </path>
+    <path name="scripts">
+      <value>./scripts</value>
+    </path>
+    <path name="modules">
+      <value>./modules</value>
+    </path>
+    <path name="images">
+      <value>./images</value>
+    </path>
+    <priority>300</priority>
+  </metadata>
+  <erase path="/I2CE/formsData/forms/role/records">
+    <lessThan version="4.3.0.12" />
+  </erase>
+  <erase path="/I2CE/formsData/forms/role/registration">
+    <lessThan version="4.3.0.12" />
+  </erase>
+  <erase path="/I2CE/formsData/forms/role/decision_maker">
+    <lessThan version="4.3.0.12" />
+  </erase>
+  <erase path="/I2CE/formsData/forms/role/manager">
+    <lessThan version="4.3.0.12" />
+  </erase>
+  <configurationGroup name="ihris-qualify-site" path="/I2CE">
+    <configurationGroup name="tasks" path="/I2CE/tasks/task_description">
+      <configuration name="can_edit_database_list_mail_smtp" locale="en_US">
+        <value>Edit the mail_smtp list</value>
+      </configuration>
+      <configuration name="can_view_database_list_mail_smtp" locale="en_US">
+        <value>View the mail_smtp list</value>
+      </configuration>
+    </configurationGroup>
+    <configurationGroup name="tasks_trickle_down" path="/I2CE/tasks/task_trickle_down/">
+      <version>4.3.0.15</version>
+      <configuration name="can_edit_database_list_mail_smtp" values="many">
+        <value>can_view_database_list_mail_smtp</value>
+        <value>can_edit_employee_database_lists</value>
+      </configuration>
+      <configuration name="can_edit_all_database_lists" values="many">
+        <value>can_edit_database_list_mail_smtp</value>
+      </configuration>
+      <configuration name="can_view_all_database_lists" values="many">
+        <value>can_view_database_list_mail_smtp</value>
+      </configuration>
+    </configurationGroup>
+    <displayName>iHRIS Qualify Site</displayName>
+    <status>advanced:false</status>
+    <configurationGroup name="feedback">
+      <displayName>Feedback Information</displayName>
+      <status>required:false</status>
+      <configuration name="email" path="to" values="single">
+        <displayName>Email Address</displayName>
+        <value>root@localhost</value>
+      </configuration>
+      <configuration name="subject" values="single" locale="en_US">
+        <displayName>Subject Line</displayName>
+        <value>iHRIS Qualify</value>
+      </configuration>
+    </configurationGroup>
+    <configurationGroup name="cache_times">
+      <displayName>Cache Times</displayName>
+      <description>Override caching times for this site.</description>
+      <status>advanced:true</status>
+      <configuration name="stale" path="/I2CE/update/times/stale">
+        <displayName>Stale Time</displayName>
+        <description>The time in seconds we wait until we check that the configuration files for the system and the
+          modules are up to date. Defaults to 10. If negative, we check the system files on each page request</description>
+        <status>required:true</status>
+        <value>600</value>
+      </configuration>
+      <configuration name="stale_time" path="/I2CE/fileSearch/stale_time">
+        <displayName>Stale Time</displayName>
+        <description>The time in seconds until a file found in the file search utility is considered stale. If stale,
+          it will search for the file, if not stale, it will use the previously found location of the file (it will
+          cache the file location). If negative, then we do not cache the file location.</description>
+        <status>required:true</status>
+        <value>1800</value>
+      </configuration>
+      <configuration name="cache_time" path="/modules/FileDump/cache_time">
+        <displayName>Cache Time</displayName>
+        <description>The time (in minutes) to cache content</description>
+        <status>required:true</status>
+        <value>60</value>
+      </configuration>
+    </configurationGroup>
+    <configurationGroup name="template">
+      <displayName>Template Information</displayName>
+      <description>Various Default Information About The Templating System</description>
+      <status>advanced:false</status>
+      <status>required:true</status>
+      <configuration name="prefix_title" values="single" locale="en_US">
+        <displayName>Page title prefix</displayName>
+        <description>Do I really want this here... should we have an attribute to declare it to overwrite?</description>
+        <value>iHRIS Qualify</value>
+      </configuration>
+    </configurationGroup>
+    <configurationGroup name="pdf_options" path="/modules/report-pdf/PDF/display-options">
+      <displayName>PDF Options</displayName>
+      <status>visible:false</status>
+      <configurationGroup name="header">
+        <displayName>Header Options</displayName>
+        <configuration name="text" locale="en_US">
+          <displayName>Header Text</displayName>
+          <value>iHRIS Qualify</value>
+        </configuration>
+      </configurationGroup>
+    </configurationGroup>
+    <configurationGroup name="page">
+      <version>4.3.0.19</version>
+      <configurationGroup name="demographic">
+        <configuration name="class" values="single">
+          <displayName>Page Class</displayName>
+          <description>The class responsible for displaying this page</description>
+          <status>required:true</status>
+          <value>iHRIS_PageFormParentPerson</value>
+        </configuration>
+      </configurationGroup>
+    </configurationGroup>
+    <configurationGroup name="roles" path="formsData/forms/role">
+      <displayName>Roles</displayName>
+      <version>4.3.0.9</version>
+      <configurationGroup name="registrar">
+        <configuration name="last_modified">
+          <value>2018-11-24 06:03:00</value>
+        </configuration>
+        <configurationGroup name="fields">
+          <configuration name="name" values="single">
+            <value>Registrar</value>
+          </configuration>
+          <configuration name="assignable">
+            <value>1</value>
+          </configuration>
+        </configurationGroup>
+      </configurationGroup>
+      <configurationGroup name="registration_officer">
+        <configuration name="last_modified">
+          <value>2018-11-24 06:03:00</value>
+        </configuration>
+        <configurationGroup name="fields">
+          <configuration name="name" values="single">
+            <value>Registration Officer</value>
+          </configuration>
+          <configuration name="assignable">
+            <value>1</value>
+          </configuration>
+        </configurationGroup>
+      </configurationGroup>
+      <configurationGroup name="data_officer">
+        <configuration name="last_modified">
+          <value>2018-11-24 06:03:00</value>
+        </configuration>
+        <configurationGroup name="fields">
+          <configuration name="name" values="single">
+            <value>Data Officer</value>
+          </configuration>
+          <configuration name="assignable">
+            <value>1</value>
+          </configuration>
+        </configurationGroup>
+      </configurationGroup>
+    </configurationGroup>
+    <configurationGroup name="role_trickle_down" path="tasks/role_trickle_down">
+      <version>4.3.0.18</version>
+      <configuration name="personnel" values="many">
+        <status>uniquemerge:true</status>
+        <value>person_can_edit_child_form_exam_apply</value>
+        <value>person_can_edit_child_form_exam_result</value>
+        <value>person_can_edit_child_form_overall_exam_assessment</value>
+        <value>person_can_edit_child_form_disciplinary_action</value>
+        <value>person_can_edit_child_form_license</value>
+        <value>person_can_edit_child_form_license_renewal_apply</value>
+      </configuration>
+      <configuration name="registrar" values="many">
+        <status>uniquemerge:true</status>
+        <value>can_edit_all_database_lists</value>
+        <value>geography_can_edit</value>
+        <value>users_can_edit</value>
+        <value>can_change_own_password</value>
+        <value>custom_reports_can_access_reports</value>
+        <value>custom_reports_can_edit_reportViews</value>
+        <value>custom_reports_can_view_reportViews</value>
+        <value>can_configure_system</value>
+        <value>person_can_edit</value>
+        <value>person_can_edit_child_forms</value>
+        <value>person_can_edit_child_form_demographic</value>
+      </configuration>
+      <configuration name="data_officer" values="many">
+        <status>uniquemerge:true</status>
+        <value>person_can_add</value>
+        <value>can_edit_all_database_lists</value>
+        <value>geography_can_edit</value>
+        <value>users_can_edit</value>
+        <value>can_change_own_password</value>
+        <value>custom_reports_can_access_reports</value>
+        <value>custom_reports_can_edit_reportViews</value>
+        <value>custom_reports_can_view_reportViews</value>
+        <value>can_configure_system</value>
+        <value>person_can_edit</value>
+        <value>person_can_edit_child_forms</value>
+        <value>person_can_edit_child_form_demographic</value>
+      </configuration>
+      <configuration name="registration_officer" values="many">
+        <status>uniquemerge:true</status>
+        <value>can_edit_all_database_lists</value>
+        <value>geography_can_edit</value>
+        <value>users_can_edit</value>
+        <value>can_change_own_password</value>
+        <value>custom_reports_can_access_reports</value>
+        <value>custom_reports_can_edit_reportViews</value>
+        <value>custom_reports_can_view_reportViews</value>
+        <value>can_configure_system</value>
+        <value>person_can_edit</value>
+        <value>person_can_edit_child_forms</value>
+        <value>person_can_edit_child_form_demographic</value>
+      </configuration>
+    </configurationGroup>
+    <configurationGroup name="forms" path="/modules/forms">
+      <version>4.3.0.5</version>
+      <displayName>Forms</displayName>
+      <configurationGroup name="forms">
+        <configurationGroup name="mail_smtp">
+          <displayName>MAIL SMTP</displayName>
+          <description>The MAIL SMTP Form</description>
+          <configuration name="class" values="single">
+            <displayName>Class Name</displayName>
+            <description>The name of the class providing the form</description>
+            <value>LBBoards_MailSMTP</value>
+          </configuration>
+          <configuration name="storage" values="single">
+            <displayName>Storage Details</displayName>
+            <description>The storage mechanism for this form.</description>
+            <value>magicdata</value>
+          </configuration>
+          <configuration name="display" values="single" locale="en_US">
+            <displayName>Display name</displayName>
+            <description>The display name for this form</description>
+            <value>SMTP Settings</value>
+          </configuration>
+        </configurationGroup>
+      </configurationGroup>
+      <configurationGroup name="formClasses">
+        <version>4.3.0.6</version>
+        <displayName>Form Class Configuration</displayName>
+        <configurationGroup name="LBBoards_MailSMTP">
+          <configuration name="extends">
+            <displayName>The class this form extends</displayName>
+            <value>I2CE_List</value>
+          </configuration>
+          <configurationGroup name="fields">
+            <displayName>The fields defined for this form</displayName>
+            <configurationGroup name="name">
+              <displayName>The field 'host'</displayName>
+              <configuration name="formfield" values="single" type="string">
+                <displayName>The form field type</displayName>
+                <value>STRING_LINE</value>
+              </configuration>
+              <configuration name="required" type="boolean">
+                <displayName>This field is required to be set</displayName>
+                <value>true</value>
+              </configuration>
+              <configuration name="headers" type="delimited" values="many" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Name</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="host">
+              <displayName>The field 'host'</displayName>
+              <configuration name="formfield" values="single" type="string">
+                <displayName>The form field type</displayName>
+                <value>STRING_LINE</value>
+              </configuration>
+              <configuration name="required" type="boolean">
+                <displayName>This field is required to be set</displayName>
+                <value>true</value>
+              </configuration>
+              <configuration name="headers" type="delimited" values="many" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Host</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="username">
+              <displayName>The field 'username'</displayName>
+              <configuration name="formfield" values="single" type="string">
+                <displayName>The form field type</displayName>
+                <value>STRING_LINE</value>
+              </configuration>
+              <configuration name="required" type="boolean">
+                <displayName>This field is required to be set</displayName>
+                <value>true</value>
+              </configuration>
+              <configuration name="headers" type="delimited" values="many" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Username</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="password">
+              <displayName>The field 'license_number'</displayName>
+              <configuration name="formfield" values="single" type="string">
+                <displayName>The form field type</displayName>
+                <value>STRING_LINE</value>
+              </configuration>
+              <configuration name="required" type="boolean">
+                <displayName>This field is required to be set</displayName>
+                <value>true</value>
+              </configuration>
+              <configuration name="headers" type="delimited" values="many" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Password</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="port">
+              <displayName>The field 'port'</displayName>
+              <configuration name="formfield" values="single" type="string">
+                <displayName>The form field type</displayName>
+                <value>STRING_LINE</value>
+              </configuration>
+              <configuration name="required" type="boolean">
+                <displayName>This field is required to be set</displayName>
+                <value>true</value>
+              </configuration>
+              <configuration name="headers" type="delimited" values="many" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Port</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="from">
+              <displayName>The field 'to'</displayName>
+              <configuration name="formfield" values="single" type="string">
+                <displayName>The form field type</displayName>
+                <value>STRING_LINE</value>
+              </configuration>
+              <configuration name="required" type="boolean">
+                <displayName>This field is required to be set</displayName>
+                <value>true</value>
+              </configuration>
+              <configuration name="headers" type="delimited" values="many" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:From</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="reply_to">
+              <displayName>The field 'reply_to'</displayName>
+              <configuration name="formfield" values="single" type="string">
+                <displayName>The form field type</displayName>
+                <value>STRING_LINE</value>
+              </configuration>
+              <configuration name="required" type="boolean">
+                <displayName>This field is required to be set</displayName>
+                <value>true</value>
+              </configuration>
+              <configuration name="headers" type="delimited" values="many" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Reply To</value>
+              </configuration>
+            </configurationGroup>
+          </configurationGroup>
+        </configurationGroup>
+      </configurationGroup>
+    </configurationGroup>
+  </configurationGroup>
+</I2CEConfiguration>

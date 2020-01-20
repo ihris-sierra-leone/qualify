@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<!DOCTYPE I2CEConfiguration SYSTEM "I2CE_Configuration.dtd">
+<I2CEConfiguration name="LBBoards_Cadre">
+  <metadata>
+    <displayName>Person</displayName>
+    <category>Application Component</category>
+    <description>Makes Person information available to the system</description>
+    <link>https://launchpad.net/i2ce</link>
+    <version>4.3.0.7</version>
+    <requirement name="ihris-qualify">
+      <atLeast version="4.3" />
+      <lessThan version="4.4" />
+    </requirement>
+    <path name="templates">
+      <value>./templates</value>
+    </path>
+    <priority>350</priority>
+  </metadata>
+  <erase path="/modules/forms/formClasses/iHRIS_Cadre/fields/qualification">
+    <lessThan version="4.3.0.4" />
+  </erase>
+  <configurationGroup name="Person" path="/I2CE">
+    <configurationGroup name="forms" path="/modules/forms">
+      <displayName>Forms</displayName>
+      <description>Information about the forms made available by iHRIS-Common Person</description>
+      <configurationGroup name="formClasses">
+        <version>4.3.0.7</version>
+        <displayName>Form Class Configuration</displayName>
+        <configurationGroup name="iHRIS_Cadre">
+          <configurationGroup name="fields">
+            <displayName>The fields defined for this form</displayName>
+            <configurationGroup name="code">
+              <displayName>The field 'cadre'</displayName>
+              <configuration name="formfield">
+                <displayName>The form field type</displayName>
+                <value>STRING_LINE</value>
+              </configuration>
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Code</value>
+              </configuration>
+              <configuration name="required" type="boolean">
+                <displayName>This field is required to be set</displayName>
+                <value>true</value>
+              </configuration>
+              <configuration name="unique" type="boolean">
+                <displayName>This field is required to be set</displayName>
+                <value>true</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="last_registration_number">
+              <displayName>The field 'cadre'</displayName>
+              <configuration name="formfield">
+                <displayName>The form field type</displayName>
+                <value>STRING_LINE</value>
+              </configuration>
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Last Registration Number</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="last_index_number">
+              <displayName>The field 'cadre'</displayName>
+              <configuration name="formfield">
+                <displayName>The form field type</displayName>
+                <value>STRING_LINE</value>
+              </configuration>
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Last Index Number</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="last_license_number">
+              <displayName>The field 'cadre'</displayName>
+              <configuration name="formfield">
+                <displayName>The form field type</displayName>
+                <value>STRING_LINE</value>
+              </configuration>
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Last License Number</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="total_fail_to_resit_all">
+              <displayName>The field 'total_fail_to_resit_all'</displayName>
+              <configuration name="formfield">
+                <displayName>The form field type</displayName>
+                <value>INT</value>
+              </configuration>
+              <configuration name="required" type="boolean">
+                <displayName>This field is required to be set</displayName>
+                <value>true</value>
+              </configuration>
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Total courses if failed then resit all courses</value>
+              </configuration>
+            </configurationGroup>
+          </configurationGroup>
+        </configurationGroup>
+        <!-- iHRIS_Person -->
+      </configurationGroup>
+      <!-- End /modules/forms/formClasses -->
+    </configurationGroup>
+    <!-- End /modules/forms -->
+  </configurationGroup>
+  <!-- Person -->
+</I2CEConfiguration>

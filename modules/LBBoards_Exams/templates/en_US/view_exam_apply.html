@@ -1,0 +1,27 @@
+<div task='person_can_view_child_form_exam_apply'>
+	<div class="editRecord">
+		<p>Edit This Information</p>
+		<ul>
+			<li task='person_can_edit_child_form_exam_apply' type="module" name="LBBoards_Exams" if="canApplyExam()">
+				<span type="form" name="exam_apply" ifSet="exam_apply:exam_app_status" ifValue="exam_app_status|pending">
+					<span type="form" name="exam_apply:id" href="exam_apply?id=" parent="true">Update this Information</span>
+				</span>
+			</li>
+		</ul>
+	</div> <!-- editRecord -->
+
+	<div class="dataTable">
+		<table border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<th colspan="2">Exam Application Information</th>
+			</tr>
+			<span type="form" name="exam_apply:exam_schedule" showhead="default" class="even"></span>
+			<span type="form" name="exam_apply:payment_slip" showhead="default"></span>
+			<span type="form" name="exam_apply:application_date" showhead="default"></span>
+			<span type="form" name="exam_apply:academic_year" showhead="default" class="even"></span>
+			<span type="form" name="exam_apply:exam_app_status" showhead="default" class="even"></span>
+			<span ifSet="exam_apply:index_number" type="form" name="exam_apply:index_number" showhead="default" class="even"></span>
+			<span ifSet="exam_apply:reason" type="form" name="exam_apply:reason" showhead="default" class="even"></span>
+		</table>
+	</div> <!-- dataTable -->
+</div>

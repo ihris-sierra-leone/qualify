@@ -1,0 +1,27 @@
+<div task='person_can_view_child_form_license'>
+	<div class="editRecord">
+		<p>Actions About This License</p>
+		<ul>
+			<li task='person_can_edit_child_form_license'>
+				<span type="module" name="LBBoards_License" if="canRenewLicense()">
+					<span task='person_can_edit_child_form_license' type="form" name="license:id" href="license_renewal_apply?license=" parent="true">
+						Apply License Renewal
+					</span>
+				</span>
+				<span role="registrar" type="form" name="license:id" href="print_certificate?license=" parent="true">Print Centificate</span>
+			</li>
+		</ul>
+	</div> <!-- editRecord -->
+
+	<div class="dataTable">
+		<table border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<th colspan="2">License Information</th>
+			</tr>
+			<span type="form" name="license:license_number" showhead="default" class="even"></span>
+			<span type="form" name="license:start_date" showhead="default"></span>
+			<span type="form" name="license:end_date" showhead="default"></span>
+			<span type="form" name="license:license_status" showhead="default"></span>
+		</table>
+	</div> <!-- dataTable -->
+</div>

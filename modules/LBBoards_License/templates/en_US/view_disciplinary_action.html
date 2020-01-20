@@ -1,0 +1,58 @@
+<div>
+	<div class="editRecord">
+		<p>Edit This Information</p>
+		<ul>
+			<li>
+				<span type="module" name="LBBoards_License" if="canEditDiscipline()">
+					<span ifSet="disciplinary_action:disciplinary_status" ifValue="exam_app_status|pending" type="form" name="disciplinary_action:id"
+					 href="disciplinary_action?id=" parent="true">Correct this Information
+					</span>
+				</span>
+			</li>
+			<li>
+				<span type="module" name="LBBoards_License" if="canApproveDiscipline()">
+					<span ifSet="disciplinary_action:disciplinary_status" ifValue="!exam_app_status|accepted" type="form" name="disciplinary_action">
+						<span ifSet="disciplinary_action:suspend" ifValue="1" type="form" name="disciplinary_action:id" href="approve_disciplinary_action?id="
+						 parent="true">Approve/Reject</span>
+					</span>
+				</span>
+				<span type="module" name="LBBoards_License" if="canEditDiscipline()">
+					<span ifSet="disciplinary_action:disciplinary_status" ifValue="exam_app_status|accepted" type="form" name="disciplinary_action">
+						<span ifSet="!disciplinary_action:reinstate_date" type="form" name="disciplinary_action">
+							<span ifSet="disciplinary_action:suspend" ifValue="1" type="form" name="disciplinary_action:id" href="disciplinary_reinstate?id="
+							 parent="true">Reinstate License
+							</span>
+						</span>
+					</span>
+				</span>
+				<span type="module" name="LBBoards_License" if="canApproveDiscipline()">
+					<span ifSet="disciplinary_action:reinstate_date" ifValue="!0000-00-00 00:00:00" type="form" name="disciplinary_action">
+						<span ifSet="disciplinary_action:reinstate_status" ifValue="!exam_app_status|accepted" type="form" name="disciplinary_action:id"
+						 href="approve_reinstate?id=" parent="true">Approve Reinstate</span>
+					</span>
+				</span>
+			</li>
+		</ul>
+	</div> <!-- editRecord -->
+
+	<div class="dataTable">
+		<table border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<th colspan="2">Disciplinary Action</th>
+			</tr>
+			<span type="form" name="disciplinary_action:disciplinary_action_reason" showhead="default"></span>
+			<span type="form" name="disciplinary_action:action_date" showhead="default"></span>
+			<span type="form" name="disciplinary_action:officer_disciplinary_notes" showhead="default"></span>
+			<span type="form" name="disciplinary_action:suspend" showhead="default"></span>
+			<span type="form" ifset="disciplinary_action:suspend" ifvalue="!0" name="disciplinary_action:disciplinary_status"
+			 showhead="default"></span>
+			<span type="form" ifset="true" name="disciplinary_action:registrar_disciplinary_notes" showhead="default"></span>
+			<span type="form" ifSet="disciplinary_action:reinstate_date" ifValue="!0000-00-00 00:00:00" name="disciplinary_action:reinstate_date"
+			 showhead="default"></span>
+			<span type="form" ifset="true" name="disciplinary_action:officer_reinstate_notes" showhead="default"></span>
+			<span type="form" ifSet="disciplinary_action:reinstate_date" ifValue="!0000-00-00 00:00:00" name="disciplinary_action:reinstate_status"
+			 showhead="default"></span>
+			<span type="form" ifset="true" name="disciplinary_action:registrar_reinstate_notes" showhead="default"></span>
+		</table>
+	</div> <!-- dataTable -->
+</div>

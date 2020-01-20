@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<!DOCTYPE I2CEConfiguration SYSTEM "I2CE_Configuration.dtd">
+<I2CEConfiguration name="LBBoards_Education">
+  <metadata>
+    <displayName>iHRIS Person Education</displayName>
+    <category>Application Component</category>
+    <description>A Person's Education and Degree Details</description>
+    <creator>Intrahealth Informatics</creator>
+    <email>hris@capacityproject.org</email>
+    <link>https://launchpad.net/i2ce</link>
+    <version>4.3.0.2</version>
+    <path name="templates">
+      <value>./templates</value>
+    </path>
+    <requirement name="ihris-qualify">
+      <atLeast version="4.3" />
+    </requirement>
+    <priority>350</priority>
+  </metadata>
+  <erase path="/modules/forms/formClasses/iHRIS_SecondaryEducation/fields/sec_school">
+    <lessThan version="4.3.0.2" />
+  </erase>
+  <configurationGroup name="PersonEducation" path="/I2CE">
+    <configurationGroup name="page">
+      <configurationGroup name="education">
+        <configuration name="style" values="single">
+          <displayName>Page Style</displayName>
+          <description>The Page Style</description>
+          <value>ihris_common_page_form_parent_person</value>
+        </configuration>
+        <configuration name="class" values="single">
+          <displayName>Page Class</displayName>
+          <description>The class responsible for displaying this page</description>
+          <status>required:true</status>
+          <value>iHRIS_PageFormParentPerson</value>
+        </configuration>
+      </configurationGroup>
+    </configurationGroup>
+    <!-- end of page-->
+    <configurationGroup name="forms" path="/modules/forms">
+      <configurationGroup name="forms">
+        <configurationGroup name="person">
+          <configurationGroup name="meta">
+            <configuration name="child_forms" values="many">
+              <status>uniquemerge:true</status>
+              <value>education</value>
+            </configuration>
+          </configurationGroup>
+        </configurationGroup>
+      </configurationGroup>
+      <configurationGroup name="formClasses">
+        <version>4.3.0.1</version>
+        <configurationGroup name="iHRIS_SecondaryEducation">
+          <displayName>Configuration for the class 'iHRIS_Education'</displayName>
+          <configuration name="extends">
+            <displayName>The class this form extends</displayName>
+            <value>I2CE_Form</value>
+          </configuration>
+          <configurationGroup name="fields">
+            <displayName>The fields defined for this form</displayName>
+            <configurationGroup name="institution">
+              <displayName>The field 'institution'</displayName>
+              <configuration name="formfield">
+                <displayName>The form field type</displayName>
+                <value>STRING_LINE</value>
+              </configuration>
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Institution Name</value>
+              </configuration>
+              <configuration name="required" type="boolean">
+                <displayName>This field is required to be set</displayName>
+                <value>true</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="location">
+              <displayName>The field 'location'</displayName>
+              <configuration name="formfield">
+                <displayName>The form field type</displayName>
+                <value>STRING_LINE</value>
+              </configuration>
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Institution Location</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="year">
+              <displayName>The field 'year'</displayName>
+              <configuration name="formfield">
+                <displayName>The form field type</displayName>
+                <value>DATE_Y</value>
+              </configuration>
+              <configuration name="default_eval">
+                <displayName>The default Value as an eval string</displayName>
+                <value>I2CE_Date::blank()</value>
+              </configuration>
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <value>default:Year of Graduation (leave blank if In Progress)</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="major">
+              <displayName>The field 'major'</displayName>
+              <configuration name="formfield">
+                <displayName>The form field type</displayName>
+                <value>STRING_LINE</value>
+              </configuration>
+              <configuration name="headers" type="delimited" locale="en_US">
+                <displayName>The headers for this field.</displayName>
+                <version>3.2.4</version>
+                <value>default:Major</value>
+              </configuration>
+            </configurationGroup>
+          </configurationGroup>
+        </configurationGroup>
+      </configurationGroup>
+      <!-- enf of formclasses-->
+    </configurationGroup>
+  </configurationGroup>
+</I2CEConfiguration>

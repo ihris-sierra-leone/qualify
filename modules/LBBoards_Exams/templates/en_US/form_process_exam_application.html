@@ -1,0 +1,47 @@
+<div id="siteContent">
+  <script type="text/javascript">
+    function verify(id, type) {
+      let reasonDOM = document.getElementById("reason" + id)
+      document.getElementById(id+type).disabled = true;
+      let reason = ""
+      if (reasonDOM) {
+        reason = reasonDOM.value
+      }
+      if (type == "reject" && !reason) {
+        document.getElementById("reason_error" + id).innerHTML = "Rejecting Reason Missing";
+        return false
+      }
+      if (window.XMLHttpRequest) { // code for IE7+, Firefox, Chrome, Opera, Safari
+        xmlhttp = new XMLHttpRequest();
+      } else { // code for IE6, IE5
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+      }
+      xmlhttp.onreadystatechange = function () {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+          location.reload()
+          // document.getElementById("invoice").innerHTML = xmlhttp.responseText;
+        }
+      }
+      let request = "process_exam_application?type=" + type + "&exam_apply=exam_apply|" + id + "&reason=" + reason
+      xmlhttp.open("GET", request, true);
+      xmlhttp.send();
+    }
+  </script>
+  Board Exam Applicants
+  <table border="0" cellspacing="0" cellpadding="0" class="multiFormTable">
+    <tr>
+      <th width="20%">First Name</th>
+      <th width="20%">Surname</th>
+      <th width="20%">Exam</th>
+      <th width="10%">Payment Slip</th>
+      <th width="10%">Application Date</th>
+      <th width="10%">Status</th>
+      <th width="10%">Registration Number</th>
+      <th width="10%">Reason</th>
+      <th width="10%">Action</th>
+    </tr>
+    <div id='applicants_list'>
+
+    </div>
+  </table>
+</div>

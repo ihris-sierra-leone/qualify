@@ -1,0 +1,610 @@
+<?xml version="1.0"?>
+<!DOCTYPE I2CEConfiguration SYSTEM "I2CE_Configuration.dtd">
+<I2CEConfiguration name="LBBoards_Regions">
+  <metadata>
+    <displayName>Regions</displayName>
+    <version>4.3.0.2</version>
+    <requirement name="Geography">
+      <atLeast version="4.3" />
+      <lessThan version="4.4" />
+    </requirement>
+  </metadata>
+  <configurationGroup name="iso-country" path="/I2CE/formsData/forms/country">
+    <version>4.3.0.2</version>
+    <configurationGroup name="LR">
+      <configurationGroup name="fields">
+        <displayName>Fields</displayName>
+        <configuration name="alpha_two">
+          <displayName>Code</displayName>
+          <value>LR</value>
+        </configuration>
+        <configuration name="name" locale="en_US">
+          <displayName>Name</displayName>
+          <value>Liberia</value>
+        </configuration>
+        <configuration name="location">
+          <displayName>Location</displayName>
+          <value>1</value>
+        </configuration>
+        <configuration name="primary">
+          <displayName>Primary</displayName>
+          <value>1</value>
+        </configuration>
+      </configurationGroup>
+    </configurationGroup>
+  </configurationGroup>
+  <configurationGroup name="regions" path="//I2CE/formsData/forms/region">
+    <displayName>Export</displayName>
+    <version>4.3.0.1</version>
+    <configurationGroup name="1">
+      <displayName>1</displayName>
+      <configuration name="last_modified">
+        <displayName>Last Modified</displayName>
+        <value>2019-01-19 15:40:14</value>
+      </configuration>
+      <configuration name="who">
+        <displayName>Who</displayName>
+        <value>0</value>
+      </configuration>
+      <configurationGroup name="fields">
+        <displayName>Fields</displayName>
+        <configuration name="remap">
+          <displayName>Remap</displayName>
+          <value></value>
+        </configuration>
+        <configuration name="i2ce_hidden">
+          <displayName>I2ce Hidden</displayName>
+          <value>0</value>
+        </configuration>
+        <configuration name="name">
+          <displayName>Name</displayName>
+          <value>Bomi</value>
+        </configuration>
+        <configuration name="country">
+          <displayName>Country</displayName>
+          <value>country|LR</value>
+        </configuration>
+        <configuration name="code">
+          <displayName>Code</displayName>
+          <value></value>
+        </configuration>
+        <configuration name="csd_uuid">
+          <displayName>Csd Uuid</displayName>
+          <value></value>
+        </configuration>
+      </configurationGroup>
+    </configurationGroup>
+    <configurationGroup name="2">
+      <displayName>2</displayName>
+      <configuration name="last_modified">
+        <displayName>Last Modified</displayName>
+        <value>2019-01-19 15:40:19</value>
+      </configuration>
+      <configuration name="who">
+        <displayName>Who</displayName>
+        <value>0</value>
+      </configuration>
+      <configurationGroup name="fields">
+        <displayName>Fields</displayName>
+        <configuration name="remap">
+          <displayName>Remap</displayName>
+          <value></value>
+        </configuration>
+        <configuration name="i2ce_hidden">
+          <displayName>I2ce Hidden</displayName>
+          <value>0</value>
+        </configuration>
+        <configuration name="name">
+          <displayName>Name</displayName>
+          <value>Bong</value>
+        </configuration>
+        <configuration name="country">
+          <displayName>Country</displayName>
+          <value>country|LR</value>
+        </configuration>
+        <configuration name="code">
+          <displayName>Code</displayName>
+          <value></value>
+        </configuration>
+        <configuration name="csd_uuid">
+          <displayName>Csd Uuid</displayName>
+          <value></value>
+        </configuration>
+      </configurationGroup>
+    </configurationGroup>
+    <configurationGroup name="3">
+      <displayName>3</displayName>
+      <configuration name="last_modified">
+        <displayName>Last Modified</displayName>
+        <value>2019-01-19 15:40:26</value>
+      </configuration>
+      <configuration name="who">
+        <displayName>Who</displayName>
+        <value>0</value>
+      </configuration>
+      <configurationGroup name="fields">
+        <displayName>Fields</displayName>
+        <configuration name="remap">
+          <displayName>Remap</displayName>
+          <value></value>
+        </configuration>
+        <configuration name="i2ce_hidden">
+          <displayName>I2ce Hidden</displayName>
+          <value>0</value>
+        </configuration>
+        <configuration name="name">
+          <displayName>Name</displayName>
+          <value>Gbarpolu</value>
+        </configuration>
+        <configuration name="country">
+          <displayName>Country</displayName>
+          <value>country|LR</value>
+        </configuration>
+        <configuration name="code">
+          <displayName>Code</displayName>
+          <value></value>
+        </configuration>
+        <configuration name="csd_uuid">
+          <displayName>Csd Uuid</displayName>
+          <value></value>
+        </configuration>
+      </configurationGroup>
+    </configurationGroup>
+    <configurationGroup name="4">
+      <displayName>4</displayName>
+      <configuration name="last_modified">
+        <displayName>Last Modified</displayName>
+        <value>2019-01-19 15:40:29</value>
+      </configuration>
+      <configuration name="who">
+        <displayName>Who</displayName>
+        <value>0</value>
+      </configuration>
+      <configurationGroup name="fields">
+        <displayName>Fields</displayName>
+        <configuration name="remap">
+          <displayName>Remap</displayName>
+          <value></value>
+        </configuration>
+        <configuration name="i2ce_hidden">
+          <displayName>I2ce Hidden</displayName>
+          <value>0</value>
+        </configuration>
+        <configuration name="name">
+          <displayName>Name</displayName>
+          <value>Grand Bassa</value>
+        </configuration>
+        <configuration name="country">
+          <displayName>Country</displayName>
+          <value>country|LR</value>
+        </configuration>
+        <configuration name="code">
+          <displayName>Code</displayName>
+          <value></value>
+        </configuration>
+        <configuration name="csd_uuid">
+          <displayName>Csd Uuid</displayName>
+          <value></value>
+        </configuration>
+      </configurationGroup>
+    </configurationGroup>
+    <configurationGroup name="5">
+      <displayName>5</displayName>
+      <configuration name="last_modified">
+        <displayName>Last Modified</displayName>
+        <value>2019-01-19 15:40:35</value>
+      </configuration>
+      <configuration name="who">
+        <displayName>Who</displayName>
+        <value>0</value>
+      </configuration>
+      <configurationGroup name="fields">
+        <displayName>Fields</displayName>
+        <configuration name="remap">
+          <displayName>Remap</displayName>
+          <value></value>
+        </configuration>
+        <configuration name="i2ce_hidden">
+          <displayName>I2ce Hidden</displayName>
+          <value>0</value>
+        </configuration>
+        <configuration name="name">
+          <displayName>Name</displayName>
+          <value>Grand Cape Mount</value>
+        </configuration>
+        <configuration name="country">
+          <displayName>Country</displayName>
+          <value>country|LR</value>
+        </configuration>
+        <configuration name="code">
+          <displayName>Code</displayName>
+          <value></value>
+        </configuration>
+        <configuration name="csd_uuid">
+          <displayName>Csd Uuid</displayName>
+          <value></value>
+        </configuration>
+      </configurationGroup>
+    </configurationGroup>
+    <configurationGroup name="6">
+      <displayName>6</displayName>
+      <configuration name="last_modified">
+        <displayName>Last Modified</displayName>
+        <value>2019-01-19 15:40:41</value>
+      </configuration>
+      <configuration name="who">
+        <displayName>Who</displayName>
+        <value>0</value>
+      </configuration>
+      <configurationGroup name="fields">
+        <displayName>Fields</displayName>
+        <configuration name="remap">
+          <displayName>Remap</displayName>
+          <value></value>
+        </configuration>
+        <configuration name="i2ce_hidden">
+          <displayName>I2ce Hidden</displayName>
+          <value>0</value>
+        </configuration>
+        <configuration name="name">
+          <displayName>Name</displayName>
+          <value>Grand Gedeh</value>
+        </configuration>
+        <configuration name="country">
+          <displayName>Country</displayName>
+          <value>country|LR</value>
+        </configuration>
+        <configuration name="code">
+          <displayName>Code</displayName>
+          <value></value>
+        </configuration>
+        <configuration name="csd_uuid">
+          <displayName>Csd Uuid</displayName>
+          <value></value>
+        </configuration>
+      </configurationGroup>
+    </configurationGroup>
+    <configurationGroup name="7">
+      <displayName>7</displayName>
+      <configuration name="last_modified">
+        <displayName>Last Modified</displayName>
+        <value>2019-01-19 15:40:44</value>
+      </configuration>
+      <configuration name="who">
+        <displayName>Who</displayName>
+        <value>0</value>
+      </configuration>
+      <configurationGroup name="fields">
+        <displayName>Fields</displayName>
+        <configuration name="remap">
+          <displayName>Remap</displayName>
+          <value></value>
+        </configuration>
+        <configuration name="i2ce_hidden">
+          <displayName>I2ce Hidden</displayName>
+          <value>0</value>
+        </configuration>
+        <configuration name="name">
+          <displayName>Name</displayName>
+          <value>Grand Kru</value>
+        </configuration>
+        <configuration name="country">
+          <displayName>Country</displayName>
+          <value>country|LR</value>
+        </configuration>
+        <configuration name="code">
+          <displayName>Code</displayName>
+          <value></value>
+        </configuration>
+        <configuration name="csd_uuid">
+          <displayName>Csd Uuid</displayName>
+          <value></value>
+        </configuration>
+      </configurationGroup>
+    </configurationGroup>
+    <configurationGroup name="8">
+      <displayName>8</displayName>
+      <configuration name="last_modified">
+        <displayName>Last Modified</displayName>
+        <value>2019-01-19 15:40:47</value>
+      </configuration>
+      <configuration name="who">
+        <displayName>Who</displayName>
+        <value>0</value>
+      </configuration>
+      <configurationGroup name="fields">
+        <displayName>Fields</displayName>
+        <configuration name="remap">
+          <displayName>Remap</displayName>
+          <value></value>
+        </configuration>
+        <configuration name="i2ce_hidden">
+          <displayName>I2ce Hidden</displayName>
+          <value>0</value>
+        </configuration>
+        <configuration name="name">
+          <displayName>Name</displayName>
+          <value>Lofa</value>
+        </configuration>
+        <configuration name="country">
+          <displayName>Country</displayName>
+          <value>country|LR</value>
+        </configuration>
+        <configuration name="code">
+          <displayName>Code</displayName>
+          <value></value>
+        </configuration>
+        <configuration name="csd_uuid">
+          <displayName>Csd Uuid</displayName>
+          <value></value>
+        </configuration>
+      </configurationGroup>
+    </configurationGroup>
+    <configurationGroup name="9">
+      <displayName>9</displayName>
+      <configuration name="last_modified">
+        <displayName>Last Modified</displayName>
+        <value>2019-01-19 15:40:55</value>
+      </configuration>
+      <configuration name="who">
+        <displayName>Who</displayName>
+        <value>0</value>
+      </configuration>
+      <configurationGroup name="fields">
+        <displayName>Fields</displayName>
+        <configuration name="remap">
+          <displayName>Remap</displayName>
+          <value></value>
+        </configuration>
+        <configuration name="i2ce_hidden">
+          <displayName>I2ce Hidden</displayName>
+          <value>0</value>
+        </configuration>
+        <configuration name="name">
+          <displayName>Name</displayName>
+          <value>Margibi</value>
+        </configuration>
+        <configuration name="country">
+          <displayName>Country</displayName>
+          <value>country|LR</value>
+        </configuration>
+        <configuration name="code">
+          <displayName>Code</displayName>
+          <value></value>
+        </configuration>
+        <configuration name="csd_uuid">
+          <displayName>Csd Uuid</displayName>
+          <value></value>
+        </configuration>
+      </configurationGroup>
+    </configurationGroup>
+    <configurationGroup name="10">
+      <displayName>10</displayName>
+      <configuration name="last_modified">
+        <displayName>Last Modified</displayName>
+        <value>2019-01-19 15:41:03</value>
+      </configuration>
+      <configuration name="who">
+        <displayName>Who</displayName>
+        <value>0</value>
+      </configuration>
+      <configurationGroup name="fields">
+        <displayName>Fields</displayName>
+        <configuration name="remap">
+          <displayName>Remap</displayName>
+          <value></value>
+        </configuration>
+        <configuration name="i2ce_hidden">
+          <displayName>I2ce Hidden</displayName>
+          <value>0</value>
+        </configuration>
+        <configuration name="name">
+          <displayName>Name</displayName>
+          <value>Maryland</value>
+        </configuration>
+        <configuration name="country">
+          <displayName>Country</displayName>
+          <value>country|LR</value>
+        </configuration>
+        <configuration name="code">
+          <displayName>Code</displayName>
+          <value></value>
+        </configuration>
+        <configuration name="csd_uuid">
+          <displayName>Csd Uuid</displayName>
+          <value></value>
+        </configuration>
+      </configurationGroup>
+    </configurationGroup>
+    <configurationGroup name="11">
+      <displayName>11</displayName>
+      <configuration name="last_modified">
+        <displayName>Last Modified</displayName>
+        <value>2019-01-19 15:41:07</value>
+      </configuration>
+      <configuration name="who">
+        <displayName>Who</displayName>
+        <value>0</value>
+      </configuration>
+      <configurationGroup name="fields">
+        <displayName>Fields</displayName>
+        <configuration name="remap">
+          <displayName>Remap</displayName>
+          <value></value>
+        </configuration>
+        <configuration name="i2ce_hidden">
+          <displayName>I2ce Hidden</displayName>
+          <value>0</value>
+        </configuration>
+        <configuration name="name">
+          <displayName>Name</displayName>
+          <value>Montserrado</value>
+        </configuration>
+        <configuration name="country">
+          <displayName>Country</displayName>
+          <value>country|LR</value>
+        </configuration>
+        <configuration name="code">
+          <displayName>Code</displayName>
+          <value></value>
+        </configuration>
+        <configuration name="csd_uuid">
+          <displayName>Csd Uuid</displayName>
+          <value></value>
+        </configuration>
+      </configurationGroup>
+    </configurationGroup>
+    <configurationGroup name="12">
+      <displayName>12</displayName>
+      <configuration name="last_modified">
+        <displayName>Last Modified</displayName>
+        <value>2019-01-19 15:41:56</value>
+      </configuration>
+      <configuration name="who">
+        <displayName>Who</displayName>
+        <value>0</value>
+      </configuration>
+      <configurationGroup name="fields">
+        <displayName>Fields</displayName>
+        <configuration name="remap">
+          <displayName>Remap</displayName>
+          <value></value>
+        </configuration>
+        <configuration name="i2ce_hidden">
+          <displayName>I2ce Hidden</displayName>
+          <value>0</value>
+        </configuration>
+        <configuration name="name">
+          <displayName>Name</displayName>
+          <value>Nimba</value>
+        </configuration>
+        <configuration name="country">
+          <displayName>Country</displayName>
+          <value>country|LR</value>
+        </configuration>
+        <configuration name="code">
+          <displayName>Code</displayName>
+          <value></value>
+        </configuration>
+        <configuration name="csd_uuid">
+          <displayName>Csd Uuid</displayName>
+          <value></value>
+        </configuration>
+      </configurationGroup>
+    </configurationGroup>
+    <configurationGroup name="13">
+      <displayName>13</displayName>
+      <configuration name="last_modified">
+        <displayName>Last Modified</displayName>
+        <value>2019-01-19 15:42:07</value>
+      </configuration>
+      <configuration name="who">
+        <displayName>Who</displayName>
+        <value>0</value>
+      </configuration>
+      <configurationGroup name="fields">
+        <displayName>Fields</displayName>
+        <configuration name="remap">
+          <displayName>Remap</displayName>
+          <value></value>
+        </configuration>
+        <configuration name="i2ce_hidden">
+          <displayName>I2ce Hidden</displayName>
+          <value>0</value>
+        </configuration>
+        <configuration name="name">
+          <displayName>Name</displayName>
+          <value>River Cesss</value>
+        </configuration>
+        <configuration name="country">
+          <displayName>Country</displayName>
+          <value>country|LR</value>
+        </configuration>
+        <configuration name="code">
+          <displayName>Code</displayName>
+          <value></value>
+        </configuration>
+        <configuration name="csd_uuid">
+          <displayName>Csd Uuid</displayName>
+          <value></value>
+        </configuration>
+      </configurationGroup>
+    </configurationGroup>
+    <configurationGroup name="14">
+      <displayName>14</displayName>
+      <configuration name="last_modified">
+        <displayName>Last Modified</displayName>
+        <value>2019-01-19 15:42:10</value>
+      </configuration>
+      <configuration name="who">
+        <displayName>Who</displayName>
+        <value>0</value>
+      </configuration>
+      <configurationGroup name="fields">
+        <displayName>Fields</displayName>
+        <configuration name="remap">
+          <displayName>Remap</displayName>
+          <value></value>
+        </configuration>
+        <configuration name="i2ce_hidden">
+          <displayName>I2ce Hidden</displayName>
+          <value>0</value>
+        </configuration>
+        <configuration name="name">
+          <displayName>Name</displayName>
+          <value>River Gee</value>
+        </configuration>
+        <configuration name="country">
+          <displayName>Country</displayName>
+          <value>country|LR</value>
+        </configuration>
+        <configuration name="code">
+          <displayName>Code</displayName>
+          <value></value>
+        </configuration>
+        <configuration name="csd_uuid">
+          <displayName>Csd Uuid</displayName>
+          <value></value>
+        </configuration>
+      </configurationGroup>
+    </configurationGroup>
+    <configurationGroup name="15">
+      <displayName>15</displayName>
+      <configuration name="last_modified">
+        <displayName>Last Modified</displayName>
+        <value>2019-01-19 15:42:13</value>
+      </configuration>
+      <configuration name="who">
+        <displayName>Who</displayName>
+        <value>0</value>
+      </configuration>
+      <configurationGroup name="fields">
+        <displayName>Fields</displayName>
+        <configuration name="remap">
+          <displayName>Remap</displayName>
+          <value></value>
+        </configuration>
+        <configuration name="i2ce_hidden">
+          <displayName>I2ce Hidden</displayName>
+          <value>0</value>
+        </configuration>
+        <configuration name="name">
+          <displayName>Name</displayName>
+          <value>Sinoe</value>
+        </configuration>
+        <configuration name="country">
+          <displayName>Country</displayName>
+          <value>country|LR</value>
+        </configuration>
+        <configuration name="code">
+          <displayName>Code</displayName>
+          <value></value>
+        </configuration>
+        <configuration name="csd_uuid">
+          <displayName>Csd Uuid</displayName>
+          <value></value>
+        </configuration>
+      </configurationGroup>
+    </configurationGroup>
+  </configurationGroup>
+</I2CEConfiguration>

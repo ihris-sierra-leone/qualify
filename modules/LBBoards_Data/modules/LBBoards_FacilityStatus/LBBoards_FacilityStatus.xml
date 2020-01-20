@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<!DOCTYPE I2CEConfiguration SYSTEM "I2CE_Configuration.dtd">
+<I2CEConfiguration name="LBBoards_FacilityStatus">
+  <metadata>
+    <displayName>Facility Status</displayName>
+    <version>4.3.0.1</version>
+  </metadata>
+  <configurationGroup name="LBBoards_FacilityStatus" path="//I2CE/formsData/forms/facility_status">
+    <displayName>Export</displayName>
+    <version>4.3.0.1</version>
+    <configurationGroup name="10368">
+      <displayName>10368</displayName>
+      <configuration name="last_modified">
+        <displayName>Last Modified</displayName>
+        <value>2019-01-19 16:54:14</value>
+      </configuration>
+      <configuration name="who">
+        <displayName>Who</displayName>
+        <value>0</value>
+      </configuration>
+      <configurationGroup name="fields">
+        <displayName>Fields</displayName>
+        <configuration name="remap">
+          <displayName>Remap</displayName>
+          <value></value>
+        </configuration>
+        <configuration name="i2ce_hidden">
+          <displayName>I2ce Hidden</displayName>
+          <value>0</value>
+        </configuration>
+        <configuration name="name">
+          <displayName>Name</displayName>
+          <value>Functional</value>
+        </configuration>
+      </configurationGroup>
+    </configurationGroup>
+    <configurationGroup name="10369">
+      <displayName>10369</displayName>
+      <configuration name="last_modified">
+        <displayName>Last Modified</displayName>
+        <value>2019-01-19 16:57:02</value>
+      </configuration>
+      <configuration name="who">
+        <displayName>Who</displayName>
+        <value>0</value>
+      </configuration>
+      <configurationGroup name="fields">
+        <displayName>Fields</displayName>
+        <configuration name="remap">
+          <displayName>Remap</displayName>
+          <value></value>
+        </configuration>
+        <configuration name="i2ce_hidden">
+          <displayName>I2ce Hidden</displayName>
+          <value>0</value>
+        </configuration>
+        <configuration name="name">
+          <displayName>Name</displayName>
+          <value>Non Functional</value>
+        </configuration>
+      </configurationGroup>
+    </configurationGroup>
+  </configurationGroup>
+</I2CEConfiguration>
